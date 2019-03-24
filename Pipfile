@@ -6,9 +6,13 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "*"
 xadmin = {file = "https://codeload.github.com/sshwsfc/xadmin/zip/django2"}
 requests = "*"
+django = "==2.0.8"
+djangorestframework = "*"
+markdown = "*"
+django-filter = "*"
+djangorestframework-jwt = "*"
 
 [requires]
 python_version = "3.7"
