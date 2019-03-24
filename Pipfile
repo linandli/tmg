@@ -1,0 +1,14 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "*"
+xadmin = {file = "https://codeload.github.com/sshwsfc/xadmin/zip/django2"}
+requests = "*"
+
+[requires]
+python_version = "3.7"
