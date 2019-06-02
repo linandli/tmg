@@ -1,0 +1,54 @@
+.chart-div {
+    width: 600px; 
+    height: 400px;
+    display: block;
+    float: left;
+}
+
+.chart-show {
+    width: 100%;
+    float: left;
+}
+
+/* Border styles */
+
+.table-show thead,
+.table-show tr {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(230, 189, 189);
+}
+
+.table-show {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(150, 240, 165);
+    width: 45%;
+    float: left;
+}
+
+/* Padding and font style */
+
+.table-show th,
+.table-show td {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-family: Verdana;
+    color: black;
+    text-align: center;
+}
+
+.table-show th {
+    /* color: aquamarine; */
+    background-color: aqua;
+}
+
+/* Alternating background colors */
+
+.table-show tr:nth-child(even) {
+    background: rgb(238, 211, 210)
+}
+
+.table-show tr:nth-child(odd) {
+    background: #FFF
+}

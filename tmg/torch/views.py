@@ -1,12 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from torch.permission import check_permission
+# from django.http import Http404
+
 
 @check_permission
 def index(request):
-    return HttpResponse('你好')
+    return render(request, 'torch/index.html')
+    # return HttpResponse('你好')
 
 
 @check_permission
 def test(request):
-    return HttpResponse('Test')
+    return render(request, 'html/404.html')
+    # return HttpResponse('Test')
+

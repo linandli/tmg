@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ec4321840f1d94095e55ed21599ae69fca2b8faba2889addf7643a9e39b271ce"
+            "sha256": "d47c580a5aed9bb7f31f1dc14a80787c8feea188dc9be40214cf6c09b360e8d7"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -73,6 +73,13 @@
                 "sha256:7c3dca29c022744e95b547e867cee89f4fce4373f3549ccd8797d8eb52cdb873"
             ],
             "version": "==0.3.0"
+        },
+        "tglibs": {
+            "hashes": [
+                "sha256:c57a82b5a2be0dc24ab11d71620bc35cd24e09f0eae6fdf472de4b8ea83ad114"
+            ],
+            "path": "./whl_package/tglibs-0.0.8-py3-none-any.whl",
+            "version": "==0.0.8"
         },
         "urllib3": {
             "hashes": [

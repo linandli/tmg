@@ -16,7 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('torch/', include('torch.urls')),
+    # path('', include('torch.urls')),
 ]
+
+# handler404 = 'tmg.views.page_not_found'

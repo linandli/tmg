@@ -11,6 +11,7 @@ autopep8 = "*"
 requests = "*"
 django = "*"
 django-simpleui = "*"
+tglibs = {path = "./whl_package/tglibs-0.0.8-py3-none-any.whl"}
 
 [requires]
 python_version = "3.7"

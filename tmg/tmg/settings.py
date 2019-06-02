@@ -56,7 +56,7 @@ ROOT_URLCONF = 'tmg.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -150,6 +150,9 @@ STATICFILES_DIRS = [
 #     }]
 # },
 
+SIMPLEUI_HOME_INFO = False
+# SIMPLEUI_LOGO = 'http://www.togeek.cn/Static/img/logo.png'
+
 SIMPLEUI_CONFIG = {
     'system_keep': True,
     'menus': [{
@@ -158,6 +161,10 @@ SIMPLEUI_CONFIG = {
         'models': [{
             'name': '各厂数据',
             'url': '/torch/',
+            'icon': 'fas fa-bars'
+        }, {
+            'name': '测试数据',
+            'url': '/torch/test',
             'icon': 'fas fa-bars'
         }]
     }]

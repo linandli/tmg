@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>togeek</title>
+
+    <link href="/static/css/combo.select.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/jquery.jexcel.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/index.css" rel="stylesheet" />
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/echarts.min.js"></script>
+    <script src="/static/js/macarons.js"></script>
+    <script src="/static/js/jquery.combo.select.js"></script>
+    <script src="/static/js/jquery.jexcel.js"></script>
+    <script src="/static/js/index.js"></script>
+</head>
+
+<body>
+    <div class="select-plant">
+        <select id="plantsList" tabindex="-1">
+            <option>请选择</option>
+        </select>
+    </div>
+    <h1 id="load-title"></h1>
+    <div id="chart-show" class="chart-show"></div>
+    <div id="show-electric">
+        <!-- <table class="table-show">
+            <thead>
+                <tr>
+                    <th colspan="2">admin</th>
+                </tr>
+                <tr>
+                    <th>指标</th>
+                    <th>值</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+            </tbody>
+        </table> -->
+    </div>
+    <script type="text/javascript">
+        $('#plantsList').comboSelect();
+
+        getPlantList();
+
+        $('#plantsList').change(function(e, v) {
+            if (e.target.selectedIndex > 0) {
+                getPlantsFh(e.target.value);
+                getPlantElectric(e.target.value);
+            }
+        });
+    </script>
+</body>
+
+</html>
