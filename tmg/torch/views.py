@@ -5,3 +5,8 @@ from torch.permission import check_permission
 @check_permission
 def index(request):
     return HttpResponse('你好')
+
+
+@check_permission
+def test(request):
+    return HttpResponse('Test')

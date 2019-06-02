@@ -19,7 +19,7 @@ class Permission(models.Model):
     class Meta:
         verbose_name = '权限表'
         verbose_name_plural = verbose_name
-        # unique_together = (('url', 'per_method'), )
+        unique_together = (('url', 'per_method'), )
         # 权限信息，这里定义的权限的名字，后面是描述信息，描述信息是在django admin中显示权限用的
         permissions = (
             ('views_user_list', '查看人员信息表'),
