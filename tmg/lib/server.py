@@ -6,11 +6,11 @@
 
 from tglibs.date_time_parser import DateTimeParser
 from tglibs.singleton import Singleton
-from use_tools.lib.http_util import HttpUtil, test_server, publish_server
+from lib.http_util import HttpUtil, test_server, publish_server
 
 
 class Server(metaclass=Singleton):
-    def __init__(self, server_name='test', timeout=600):
+    def __init__(self, server_name='publish', timeout=600):
         self.http = HttpUtil({'publish': publish_server}.get(server_name, test_server), default_timeout=timeout)
         self.parser = DateTimeParser()
 
@@ -281,12 +281,22 @@ class Server(metaclass=Singleton):
             json, ok = self.http.trans_get(plant_id, ['powerMobileApp', 'page', 'electric', type, id], proxy=False, timeout=300)
 
         return json if ok else None
+    
+    def get_plants_status(self):
+        """
+        获取所有电厂连接取数状态
+        :return: 
+        """
+        json, ok = self.http.get(['distribute', 'status'])
+        return json if ok else None
 
 
 if __name__ == '__main__':
     from datetime import datetime, timedelta
 
     server = Server('publish')
-    data = server.get_his_data('6,7,13,you_gfh', datetime.now() - timedelta(hours=1), datetime.now(), False)
+    data = server.get_plants_status()
     print(data)
+    # data = server.get_his_data('6,7,13,you_gfh', datetime.now() - timedelta(hours=1), datetime.now(), False)
+    # print(data)
     # data = [(datetime.fromtimestamp(int(k)), v) for k, v in data.items()]

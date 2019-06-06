@@ -1,5 +1,4 @@
-var SimpleuiThemes = [
-    {
+var SimpleuiThemes = [{
         text: "Default",
         menu: 'rgb(48, 65, 86)',
         logo: 'rgb(48, 65, 86)',

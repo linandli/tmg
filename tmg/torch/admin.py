@@ -3,6 +3,10 @@ from torch import models
 
 # Register your models here.
 
+admin.site.site_title="技术支持平台"
+admin.site.site_header="技术支持系统"
+admin.site.index_title="技术支持系统"
+
 class PermissionAdmin(admin.ModelAdmin):
     # 需要显示的字段信息
     list_display = ('id', 'name', 'url', 'per_method', 'describe')
@@ -15,3 +19,4 @@ class UserPermissionAdmin(admin.ModelAdmin):
 
 admin.site.register(models.Permission, PermissionAdmin)
 admin.site.register(models.UserPermission, UserPermissionAdmin)
+

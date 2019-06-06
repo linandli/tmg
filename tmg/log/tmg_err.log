@@ -1,0 +1,322 @@
+[2019-06-04 11:50:02,271][Thread-1:14372][task_id:torch.permission][permission.py:24][ERROR][zhangsan 无访问test的权限]
+[2019-06-04 11:57:29,458][Thread-1:13716][task_id:torch.permission][permission.py:24][ERROR][用户：zhangsan 无访问test的权限]
+[2019-06-04 11:58:12,528][Thread-1:2928][task_id:torch.permission][permission.py:24][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-04 11:58:39,749][Thread-1:2928][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/test/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 35, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 27, in test
+    collect_logger.info("用户1:test")
+NameError: name 'collect_logger' is not defined
+[2019-06-04 12:00:52,923][Thread-1:8380][task_id:torch.permission][permission.py:24][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-04 12:03:29,046][Thread-1:14900][task_id:torch.permission][permission.py:24][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-04 12:53:43,211][Thread-4:14924][task_id:torch.permission][permission.py:24][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-04 12:55:41,713][Thread-1:7928][task_id:torch.permission][permission.py:24][ERROR][用户：zhangsan 无访问/torch/plant_status的权限]
+[2019-06-04 12:57:57,077][Thread-1:7928][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/plant_status]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 35, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 22, in plant_status
+    return render(request, 'html/plant_status.html')
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: html/plant_status.html
+[2019-06-05 10:17:37,471][Thread-1:3880][task_id:torch.permission][permission.py:24][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 10:27:27,752][Thread-1:9560][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/plant_status]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 35, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 23, in plant_status
+    return render(request, 'torch/plant_status.html', context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\defaulttags.py", line 810, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 663, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(latest_question_list)' from 'enumerate(latest_question_list)'
+[2019-06-05 10:48:49,909][Thread-4:13944][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 35, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 14, in index
+    return render(request, 'torch/index.html')
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 534, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'static'. Did you forget to register or load this tag?
+[2019-06-05 10:49:31,012][Thread-4:13944][task_id:torch.permission][permission.py:24][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 11:24:02,073][Thread-1:7588][task_id:torch.permission][permission.py:24][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 11:57:09,679][Thread-3:8824][task_id:torch.permission][permission.py:24][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 12:02:27,341][Thread-1:4588][task_id:torch.permission][permission.py:24][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 13:18:13,265][Thread-1:15808][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 34, in wapper
+    if perm_check(request, *args, **kwargs):  # 调用上面的权限验证方法
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 19, in perm_check
+    get_perm = [item.permission.url for item in models.UserPermission.objects.filter(Q(user=request.user))]
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\sql\query.py", line 1312, in _add_q
+    current_negated, allow_joins, split_subq, simple_col)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\sql\query.py", line 1318, in _add_q
+    split_subq=split_subq, simple_col=simple_col,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\sql\query.py", line 1224, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\sql\query.py", line 1086, in check_related_objects
+    for v in value:
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\utils\functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+TypeError: 'AnonymousUser' object is not iterable
+[2019-06-05 13:18:44,346][Thread-1:15808][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/plant_status]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 34, in wapper
+    if perm_check(request, *args, **kwargs):  # 调用上面的权限验证方法
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 19, in perm_check
+    get_perm = [item.permission.url for item in models.UserPermission.objects.filter(Q(user=request.user))]
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\sql\query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\sql\query.py", line 1312, in _add_q
+    current_negated, allow_joins, split_subq, simple_col)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\sql\query.py", line 1318, in _add_q
+    split_subq=split_subq, simple_col=simple_col,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\sql\query.py", line 1224, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\db\models\sql\query.py", line 1086, in check_related_objects
+    for v in value:
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\utils\functional.py", line 257, in inner
+    return func(self._wrapped, *args)
+TypeError: 'AnonymousUser' object is not iterable
+[2019-06-05 13:20:01,190][Thread-1:15648][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/test/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 34, in wapper
+    if perm_check(request, *args, **kwargs):  # 调用上面的权限验证方法
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 15, in perm_check
+    if url_name and request.user and request.user.is_authenticated():
+TypeError: 'bool' object is not callable
+[2019-06-05 13:20:31,369][Thread-1:9828][task_id:torch.permission][permission.py:24][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 13:21:41,889][Thread-1:9828][task_id:torch.permission][permission.py:27][ERROR][无访问权限]
+[2019-06-05 13:21:43,558][Thread-1:9828][task_id:torch.permission][permission.py:27][ERROR][无访问权限]
+[2019-06-05 13:21:46,375][Thread-1:9828][task_id:torch.permission][permission.py:27][ERROR][无访问权限]
+[2019-06-05 13:25:43,299][Thread-1:15956][task_id:torch.permission][permission.py:26][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 13:27:42,401][Thread-1:8412][task_id:torch.permission][permission.py:27][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 13:39:34,766][Thread-1:17368][task_id:torch.permission][permission.py:27][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 13:40:04,410][Thread-1:17368][task_id:torch.permission][permission.py:27][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 13:40:13,309][Thread-1:17368][task_id:torch.permission][permission.py:27][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 13:40:15,409][Thread-1:17368][task_id:torch.permission][permission.py:27][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 13:41:26,829][Thread-1:14700][task_id:torch.permission][permission.py:27][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 13:43:41,148][Thread-1:17348][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/plant_status]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 36, in wapper
+    logger.info('------------------>', perm_check(request, *args, **kwargs)[0])
+TypeError: 'bool' object is not subscriptable
+[2019-06-05 13:44:51,518][Thread-1:15112][task_id:torch.permission][permission.py:26][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 13:45:29,229][Thread-1:16960][task_id:torch.permission][permission.py:26][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 13:47:09,501][Thread-1:16960][task_id:torch.permission][permission.py:26][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 13:49:53,446][Thread-1:15392][task_id:torch.permission][permission.py:27][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-05 17:01:56,057][Thread-19:13012][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/plant_status]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 24, in plant_status
+    return render(request, 'torch/plant_status.html', context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 449, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 447, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 658, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 718, in args_check
+    (name, alen - dlen, plen))
+django.template.exceptions.TemplateSyntaxError: center requires 2 arguments, 1 provided
+[2019-06-05 18:01:49,510][Thread-31:8008][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/plant_status]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 24, in plant_status
+    return render(request, 'torch/plant_status.html', context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 449, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 447, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 658, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 718, in args_check
+    (name, alen - dlen, plen))
+django.template.exceptions.TemplateSyntaxError: center requires 2 arguments, 1 provided
