@@ -708,3 +708,859 @@ django.template.exceptions.TemplateSyntaxError: center requires 2 arguments, 1 p
 [2019-06-05 18:17:31,982][Thread-33:10296][task_id:torch.permission][permission.py:35][INFO][用户:AnonymousUser 访问 url: /torch/test/]
 [2019-06-05 18:17:31,984][Thread-33:10296][task_id:django.request][log.py:228][WARNING][Forbidden: /torch/test/]
 [2019-06-05 18:17:39,590][Thread-33:10296][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/plant_status]
+[2019-06-07 12:38:28,087][MainThread:15288][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 12:39:26,734][Thread-8:22552][task_id:django.request][log.py:228][WARNING][Not Found: /favicon.ico]
+[2019-06-07 12:39:28,764][Thread-8:22552][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/plant_status]
+[2019-06-07 12:40:17,141][Thread-5:25392][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/test/]
+[2019-06-07 12:40:17,145][Thread-5:25392][task_id:torch.permission][permission.py:26][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-07 12:40:17,158][Thread-5:25392][task_id:django.request][log.py:228][WARNING][Forbidden: /torch/test/]
+[2019-06-07 12:40:18,237][Thread-5:25392][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 12:44:43,249][Thread-8:22552][task_id:django.request][log.py:228][WARNING][Not Found: /favicon.ico]
+[2019-06-07 12:44:45,463][Thread-8:22552][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/plant_status]
+[2019-06-07 12:44:45,932][Thread-8:22552][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/plant_status]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 104, in find_template
+    template_name, skip=history,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: blog/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 24, in plant_status
+    return render(request, 'torch/plant_status.html', context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: blog/base.html
+[2019-06-07 12:45:09,942][Thread-8:22552][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/plant_status]
+[2019-06-07 12:45:45,764][Thread-8:22552][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 12:46:44,011][MainThread:15288][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\views.py changed, reloading.]
+[2019-06-07 12:46:47,307][MainThread:4040][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 12:46:52,662][Thread-1:22812][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 12:46:55,332][Thread-1:22812][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/test/]
+[2019-06-07 12:46:55,338][Thread-1:22812][task_id:torch.permission][permission.py:26][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-07 12:46:55,350][Thread-1:22812][task_id:django.request][log.py:228][WARNING][Forbidden: /torch/test/]
+[2019-06-07 13:01:34,912][MainThread:30712][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:03:53,111][MainThread:30712][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\views.py changed, reloading.]
+[2019-06-07 13:03:55,769][MainThread:30632][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:05:34,483][MainThread:30632][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\views.py changed, reloading.]
+[2019-06-07 13:05:37,836][MainThread:23864][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:05:49,514][Thread-1:29096][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:05:49,575][Thread-1:29096][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 15, in index
+    Utils().get_fh()
+TypeError: get_fh() missing 1 required positional argument: 'plant'
+[2019-06-07 13:06:02,329][MainThread:23864][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\views.py changed, reloading.]
+[2019-06-07 13:06:05,692][MainThread:23468][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:06:10,446][Thread-1:29392][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:06:10,451][Thread-1:29392][task_id:torch.utils][utils.py:18][INFO][65 get units]
+[2019-06-07 13:07:26,321][MainThread:23468][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\views.py changed, reloading.]
+[2019-06-07 13:07:29,336][MainThread:28912][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:08:46,124][MainThread:28912][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\views.py changed, reloading.]
+[2019-06-07 13:08:48,595][MainThread:30196][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:08:54,930][Thread-1:25340][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:08:54,936][Thread-1:25340][task_id:torch.utils][utils.py:18][INFO][65 get units]
+[2019-06-07 13:09:26,603][Thread-1:25340][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:09:26,606][Thread-1:25340][task_id:torch.utils][utils.py:18][INFO][65 get units]
+[2019-06-07 13:10:50,824][MainThread:30196][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:10:53,382][MainThread:27220][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:21:30,055][MainThread:27220][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:21:33,283][MainThread:11832][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:25:55,909][MainThread:11832][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:25:58,501][MainThread:30180][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:27:02,202][MainThread:30180][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:27:04,695][MainThread:17644][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:28:53,713][MainThread:17644][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:28:56,153][MainThread:24828][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:29:02,223][MainThread:24828][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:29:04,586][MainThread:29492][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:29:12,534][MainThread:29492][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:29:15,653][MainThread:27264][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:29:20,327][Thread-1:27440][task_id:torch.permission][permission.py:35][INFO][用户:AnonymousUser 访问 url: /torch/]
+[2019-06-07 13:29:20,334][Thread-1:27440][task_id:django.request][log.py:228][WARNING][Forbidden: /torch/]
+[2019-06-07 13:29:25,598][Thread-1:27440][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:29:25,601][Thread-1:27440][task_id:torch.utils][utils.py:18][INFO][start get plant_id: 65 of fh]
+[2019-06-07 13:30:47,262][MainThread:27264][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:30:49,857][MainThread:28928][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:30:59,684][MainThread:28928][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:31:02,673][MainThread:31728][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:31:19,501][MainThread:31728][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:31:22,473][MainThread:24908][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:32:33,118][MainThread:24908][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:32:35,522][MainThread:29772][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:33:00,148][MainThread:29772][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:33:03,093][MainThread:30840][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:33:10,372][Thread-1:22948][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:33:10,376][Thread-1:22948][task_id:torch.utils][utils.py:18][INFO][start get plant_id: 65 of fh]
+[2019-06-07 13:33:50,891][MainThread:30840][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:33:53,435][MainThread:28928][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:33:57,434][Thread-1:31324][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:33:57,437][Thread-1:31324][task_id:torch.utils][utils.py:18][INFO][start get plant_id: 65 of fh]
+[2019-06-07 13:35:36,457][MainThread:28928][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:35:39,020][MainThread:30936][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:38:39,320][MainThread:30936][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:38:41,855][MainThread:25644][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:39:11,410][MainThread:25644][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:39:13,835][MainThread:31608][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:39:18,070][Thread-1:27020][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:39:18,077][Thread-1:27020][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-07 13:39:27,247][Thread-1:27020][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 15, in index
+    context = {'data': Utils().get_fh(65)}
+  File "D:\mygit\tmg\tmg\torch\utils.py", line 40, in get_fh
+    res[key].append({_name: self.server.get_his_data(_code, start_time, end_time) for _name, _code in item.items()})
+AttributeError: 'list' object has no attribute 'items'
+[2019-06-07 13:41:21,796][MainThread:31608][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:41:24,716][MainThread:24684][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:42:05,627][MainThread:24684][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:42:08,858][MainThread:20944][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:42:12,882][Thread-1:24616][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:42:12,888][Thread-1:24616][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-07 13:43:39,100][MainThread:20944][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:43:41,612][MainThread:29524][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:43:53,403][MainThread:29524][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\views.py changed, reloading.]
+[2019-06-07 13:43:56,486][MainThread:19836][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:44:04,854][Thread-1:25624][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:44:04,857][Thread-1:25624][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-07 13:44:23,586][MainThread:19836][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:44:26,869][MainThread:31808][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:44:31,010][Thread-1:32464][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:44:31,015][Thread-1:32464][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-07 13:44:49,999][MainThread:31808][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:44:53,093][MainThread:32160][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:45:08,414][MainThread:32160][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\torch\utils.py changed, reloading.]
+[2019-06-07 13:45:11,693][MainThread:30920][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-07 13:47:15,847][Thread-1:24980][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/plant_status]
+[2019-06-07 13:47:26,887][Thread-1:24980][task_id:django.request][log.py:228][WARNING][Not Found: /favicon.ico]
+[2019-06-07 13:47:29,154][Thread-1:24980][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/plant_status]
+[2019-06-07 13:47:57,072][Thread-1:24980][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:47:57,077][Thread-1:24980][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-07 13:49:47,223][Thread-1:24980][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:49:47,226][Thread-1:24980][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-07 13:51:52,769][Thread-9:22808][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:51:52,772][Thread-9:22808][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-07 13:59:40,053][Thread-14:27372][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:59:40,057][Thread-14:27372][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-07 13:59:53,491][Thread-16:13144][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 13:59:53,494][Thread-16:13144][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-07 14:01:26,573][Thread-19:20928][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 14:01:26,579][Thread-19:20928][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-07 14:02:03,810][Thread-21:8692][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 14:02:03,816][Thread-21:8692][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-07 14:04:21,195][Thread-23:28048][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 14:04:21,200][Thread-23:28048][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-07 14:06:06,602][Thread-25:31752][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-07 14:06:06,609][Thread-25:31752][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 16:56:38,261][MainThread:8520][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-10 16:56:54,397][Thread-4:2192][task_id:django.request][log.py:228][WARNING][Not Found: /favicon.ico]
+[2019-06-10 16:56:55,649][Thread-4:2192][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 16:56:55,652][Thread-4:2192][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 16:57:21,465][Thread-6:17328][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/plant_status]
+[2019-06-10 17:00:33,051][Thread-6:17328][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/test/]
+[2019-06-10 17:00:33,055][Thread-6:17328][task_id:torch.permission][permission.py:26][ERROR][用户：zhangsan 无访问/torch/test/的权限]
+[2019-06-10 17:00:33,066][Thread-6:17328][task_id:django.request][log.py:228][WARNING][Forbidden: /torch/test/]
+[2019-06-10 17:00:38,328][Thread-6:17328][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/plant_status]
+[2019-06-10 17:00:59,077][Thread-6:17328][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 17:00:59,081][Thread-6:17328][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 17:19:34,630][Thread-7:18228][task_id:torch.permission][permission.py:35][INFO][用户:AnonymousUser 访问 url: /torch/]
+[2019-06-10 17:19:34,634][Thread-7:18228][task_id:django.request][log.py:228][WARNING][Forbidden: /torch/]
+[2019-06-10 17:19:39,578][Thread-7:18228][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 17:19:39,594][Thread-7:18228][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 17:20:31,211][Thread-7:18228][task_id:django.request][log.py:228][WARNING][Not Found: /favicon.ico]
+[2019-06-10 17:20:32,308][Thread-7:18228][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 17:20:32,311][Thread-7:18228][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 17:26:07,453][Thread-14:344][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 17:26:07,455][Thread-14:344][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 17:26:09,213][Thread-14:344][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 16, in index
+    return render(request, 'torch/torch-index.html', context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\defaulttags.py", line 810, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 663, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '()' from 'data.items()'
+[2019-06-10 17:35:32,059][Thread-16:13160][task_id:torch.permission][permission.py:35][INFO][用户:AnonymousUser 访问 url: /torch/]
+[2019-06-10 17:35:32,062][Thread-16:13160][task_id:django.request][log.py:228][WARNING][Forbidden: /torch/]
+[2019-06-10 17:35:36,013][Thread-16:13160][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 17:35:36,016][Thread-16:13160][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 17:36:09,508][Thread-16:13160][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 17:36:09,521][Thread-16:13160][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 17:37:59,810][Thread-16:13160][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 17:37:59,812][Thread-16:13160][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 17:38:35,118][Thread-19:11668][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 17:38:35,120][Thread-19:11668][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 17:41:06,330][Thread-24:16988][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 17:41:06,332][Thread-24:16988][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 19:57:02,755][MainThread:12420][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-10 19:57:10,935][Thread-1:2592][task_id:django.request][log.py:228][WARNING][Not Found: /favicon.ico]
+[2019-06-10 19:57:11,911][Thread-1:2592][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 19:57:11,916][Thread-1:2592][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 19:57:22,126][Thread-1:2592][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 16, in index
+    return render(request, 'torch/torch-index.html', context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 112: 'endblock', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+[2019-06-10 19:59:02,033][Thread-1:2592][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/plant_status]
+[2019-06-10 19:59:10,197][Thread-1:2592][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 19:59:10,202][Thread-1:2592][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 19:59:11,931][Thread-1:2592][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 16, in index
+    return render(request, 'torch/torch-index.html', context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 112: 'endblock', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+[2019-06-10 20:00:07,161][Thread-1:2592][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:00:07,164][Thread-1:2592][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:00:08,905][Thread-1:2592][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 16, in index
+    return render(request, 'torch/torch-index.html', context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 114: 'endblock', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+[2019-06-10 20:00:47,390][Thread-1:2592][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:00:47,394][Thread-1:2592][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:01:02,458][Thread-1:2592][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 16, in index
+    return render(request, 'torch/torch-index.html', context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 113: 'endblock', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+[2019-06-10 20:01:39,352][Thread-1:2592][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:01:39,354][Thread-1:2592][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:01:41,161][Thread-1:2592][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 16, in index
+    return render(request, 'torch/torch-index.html', context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\defaulttags.py", line 811, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 112: 'endblock', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+[2019-06-10 20:02:17,351][Thread-1:2592][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:02:17,355][Thread-1:2592][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:04:21,412][Thread-1:2592][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:04:21,430][Thread-1:2592][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:04:23,164][Thread-1:2592][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 16, in index
+    return render(request, 'torch/torch-index.html', context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\defaulttags.py", line 814, in do_for
+    nodelist_empty = parser.parse(('endfor',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 114: 'endblock', expected 'endfor'. Did you forget to register or load this tag?
+[2019-06-10 20:05:52,734][Thread-1:2592][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:05:52,737][Thread-1:2592][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:05:54,651][Thread-1:2592][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 16, in index
+    return render(request, 'torch/torch-index.html', context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\defaulttags.py", line 814, in do_for
+    nodelist_empty = parser.parse(('endfor',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 115: 'endblock', expected 'endfor'. Did you forget to register or load this tag?
+[2019-06-10 20:08:27,978][Thread-1:2592][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:08:27,981][Thread-1:2592][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:08:29,884][Thread-1:2592][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 16, in index
+    return render(request, 'torch/torch-index.html', context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\defaulttags.py", line 814, in do_for
+    nodelist_empty = parser.parse(('endfor',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 115: 'endblock', expected 'endfor'. Did you forget to register or load this tag?
+[2019-06-10 20:08:55,687][Thread-1:2592][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:08:55,704][Thread-1:2592][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:08:59,817][Thread-1:2592][task_id:django.request][log.py:228][ERROR][Internal Server Error: /torch/]
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\mygit\tmg\tmg\torch\permission.py", line 37, in wapper
+    return fun(request, *args, **kwargs)
+  File "D:\mygit\tmg\tmg\torch\views.py", line 16, in index
+    return render(request, 'torch/torch-index.html', context)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\defaulttags.py", line 814, in do_for
+    nodelist_empty = parser.parse(('endfor',))
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\cheng\.virtualenvs\tmg-0JPmn_IR\lib\site-packages\django\template\base.py", line 528, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 115: 'endblock', expected 'endfor'. Did you forget to register or load this tag?
+[2019-06-10 20:10:06,139][Thread-1:2592][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:10:06,142][Thread-1:2592][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:12:03,948][Thread-6:10396][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:12:03,951][Thread-6:10396][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:13:28,929][Thread-9:3172][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:13:28,932][Thread-9:3172][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:15:08,612][Thread-12:7520][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:15:08,615][Thread-12:7520][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:15:41,588][Thread-15:11892][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:15:41,592][Thread-15:11892][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:17:13,524][Thread-18:5444][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:17:13,528][Thread-18:5444][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:27:02,075][MainThread:4948][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-10 20:29:47,677][MainThread:4948][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\tmg\urls.py changed, reloading.]
+[2019-06-10 20:29:49,688][MainThread:13792][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-10 20:30:09,002][Thread-1:5056][task_id:django.request][log.py:228][WARNING][Not Found: /api/]
+[2019-06-10 20:30:17,896][MainThread:13792][task_id:django.utils.autoreload][autoreload.py:203][INFO][D:\mygit\tmg\tmg\tmg\urls.py changed, reloading.]
+[2019-06-10 20:30:19,864][MainThread:13800][task_id:django.utils.autoreload][autoreload.py:576][INFO][Watching for file changes with StatReloader]
+[2019-06-10 20:30:23,578][Thread-1:6124][task_id:django.request][log.py:228][WARNING][Not Found: /api/]
+[2019-06-10 20:30:39,089][Thread-1:6124][task_id:django.request][log.py:228][WARNING][Not Found: /accounts/profile/]
+[2019-06-10 20:30:48,381][Thread-1:6124][task_id:django.request][log.py:228][WARNING][Not Found: /api/]
+[2019-06-10 20:33:21,184][Thread-1:6124][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/]
+[2019-06-10 20:33:21,189][Thread-1:6124][task_id:torch.utils][utils.py:19][INFO][start get plant_id: 65 of fh]
+[2019-06-10 20:33:27,203][Thread-9:13360][task_id:torch.permission][permission.py:35][INFO][用户:zhangsan 访问 url: /torch/plant_status]

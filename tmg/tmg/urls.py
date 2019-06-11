@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('torch/', include('torch.urls')),
     # path('', include('torch.urls')),
+    path('api/', include('rest_framework.urls'))
 ]
 
 # handler404 = 'tmg.views.page_not_found'

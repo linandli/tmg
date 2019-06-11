@@ -12,6 +12,9 @@ requests = "*"
 django = "*"
 django-simpleui = "*"
 tglibs = {path = "./whl_package/tglibs-0.0.8-py3-none-any.whl"}
+djangorestframework = "*"
+markdown = "*"
+django-filter = "*"
 
 [requires]
 python_version = "3.7"
